@@ -1,0 +1,15 @@
+[
+    {   "id":1,
+        "album_title":"To Pimp A Butterfly",
+        "album_review":"One of the greatest albums of the 2000s",
+        "album_rating":5,
+        "artist":"Kendrick Lamar"},
+    {   "id":2,
+        "album_title":"Me Against The World",
+        "album_review":"Best album of his career?",
+        "album_rating":5,"artist":"2Pac"},
+    {   "id":7,
+        "album_title":"Alfredo",
+        "album_review":"Album of the year 2020?",
+        "album_rating":5,"artist":"Freddie Gibbs"}
+    ]
