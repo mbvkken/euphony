@@ -23,9 +23,7 @@ useEffect(() => {
   return (
     <div className="App">
       <header className="App-header">
-        <h2 style={{color: 'white'}}>euphony.
-          <Link to='/register' id="signout-btn"><button id="btn-red">Sign out</button></Link>
-        </h2>
+        <h2 style={{color: 'white'}}>euphony.</h2>
       </header>
       
       
@@ -46,6 +44,11 @@ useEffect(() => {
           );
         })}
       </div>
+      <button id="btn-red" style={{marginBottom: '40px'}}>
+        <Link to='/register' style={{textDecoration: 'none', color: 'white'}}>
+          Sign out
+        </Link>
+      </button>
     </div>
   );
 }

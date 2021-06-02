@@ -15,16 +15,18 @@ export default function Search() {
 
             {Albumdata.filter((val) => {
                 if (searchTerm == '') {
-                  return val;
+                  return;
                 } else if 
-                   (val.album_title
-                    .toLowerCase()
-                    .includes(searchTerm.toLowerCase())) {
+                   (val.album_title.toLowerCase().includes(searchTerm.toLowerCase())) {
                       return val;
-                        }})
+                        } else if (val.artist.toLowerCase().includes(searchTerm.toLowerCase())) {
+                          return val;
+                            }
+                      })
+
                     .map((val, key) => {
                         return <div key={key}>
-                                  <p style={{color:"black"}}>{val.album_title}</p>
+                                  <p style={{color:"black"}}>{val.artist} : {val.album_title}</p>
                                 </div>
                             })} 
         </div>
