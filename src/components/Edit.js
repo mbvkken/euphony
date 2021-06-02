@@ -15,12 +15,12 @@ export default function Edit(props) {
         axios.put('http://localhost/3000/reviews', data).then((res) => {
             props.setReviews(
                 props.reviews.map((item) => {
-                    return item.id === props.id? {
+                    return item.id === props.id
+                    ? {
                         id: item.id,
                         album_title: item.album_title,
                         album_review: item.album_review,
                         album_rating: item.album_rating,
-                        artist: item.artist,
                     }
                     : item;
                 })

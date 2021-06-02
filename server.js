@@ -86,7 +86,7 @@ app.put('/reviews', (req, res) => {
     'UPDATE albums SET album_review = ?, album_rating = ? WHERE id = ?';
     db.query(
         updateQuery,
-        (req.body.album_review, req.body.album_rating, req.body.id),
+        [req.body.album_review, req.body.album_rating, req.body.id],
         (err, result) => {
             if (err) {
                 console.log(result);
