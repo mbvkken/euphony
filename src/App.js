@@ -17,6 +17,7 @@ function App() {
       <Switch>
         <Route path="/register" component={Login} />
         <Route path="/" component={Home} />;
+        <Route path="/edit" component={Edit} />;
       </Switch>
     </HashRouter>
   )

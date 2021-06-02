@@ -21,6 +21,8 @@ const listener = app.listen(process.env.PORT || 3000, () => {
     console.log('listening on port ' + listener.address().port)
 })
 
+// login&register
+
 app.post('/register', (req, res) =>{
 
     const username = req.body.username;
@@ -58,7 +60,7 @@ app.post('/login', (req, res) => {
     )
 })
 
-// routes
+// CRUD routes
 
 app.get('/reviews', (req, res) => {
     db.query('SELECT * FROM albums', (err, result) => {
@@ -89,7 +91,7 @@ app.put('/reviews', (req, res) => {
         [req.body.album_review, req.body.album_rating, req.body.id],
         (err, result) => {
             if (err) {
-                console.log(result);
+                console.log(err);
             } else {
                 res.send(result);
             }
