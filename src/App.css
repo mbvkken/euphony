@@ -26,7 +26,7 @@ p {
 
 input {
   padding: 0.6rem;
-  width: 300px;
+  width: auto;
   margin-bottom: 1rem;
   border-radius: 10px;
   border: none;
@@ -105,6 +105,13 @@ input {
   padding: 1em;
   background-color: rgba(31, 58, 147, 1);
   color: white;
+}
+
+.review h5 {
+  font-style: italic;
+}
+.review p {
+  font-style: normal;
 }
 
 .reviews {

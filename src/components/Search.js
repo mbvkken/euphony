@@ -1,20 +1,35 @@
 import '../App.css';
-import {useState} from 'react';
-import Albumdata from './MOCK_DATA.json';
+import { useState, useEffect } from 'react';
+// import Albumdata from './MOCK_DATA.json';
+import axios from  'axios'; 
 
 
 export default function Search() {
+
+  const [reviews, setReviews] = useState([]);
+
+  const getReviews = () => {
+    axios.get('http://localhost:3000/reviews').then((res) => {
+      setReviews(res.data);
+      console.log(res.data)
+    });
+  };
+  useEffect(() => {
+    getReviews();
+  }, []);
+      
     
     const [ searchTerm, setSearchTerm ] = useState('');
-    
+
+   
     return (
         <div className="search">
           
             <input type="text" placeholder="Search by Album Title" 
             onChange={event => {setSearchTerm(event.target.value)}}/>
-
-            {Albumdata.filter((val) => {
-                if (searchTerm == '') {
+            
+            {reviews.filter((val) => {
+                if (searchTerm === '') {
                   return;
                 } else if 
                    (val.album_title.toLowerCase().includes(searchTerm.toLowerCase())) {

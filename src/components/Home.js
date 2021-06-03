@@ -34,10 +34,10 @@ useEffect(() => {
         {reviews.map((item) => {
           return (
             <div className="review">
-                <h3>Artist: <p>{item.artist}</p></h3>
-                <h3>Album: <p>{item.album_title}</p></h3>
-                <h3>Review: <p>{item.album_review}</p></h3>
-                <h3>Rating: <p>{item.album_rating}</p></h3>
+                <h5>Artist: <p>{item.artist}</p></h5>
+                <h5>Album: <p>{item.album_title}</p></h5>
+                <h5>Review: <p>{item.album_review}</p></h5>
+                <h5>Rating: <p>{item.album_rating}</p></h5>
                 <Edit id={item.id} reviews={reviews} setReviews={setReviews} />
                 <Delete id={item.id} reviews={reviews} setReviews={setReviews} />
             </div>  

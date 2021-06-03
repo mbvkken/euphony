@@ -20,8 +20,9 @@ export default function Add(props) {
             ]);
         });
     };
-    module.exports = 
-    addReview();
+
+    // module.exports = 
+    // addReview();
 
 return (
     <form className="add-review" onSubmit={handleSubmit(onSubmit)}>

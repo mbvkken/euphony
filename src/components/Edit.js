@@ -30,7 +30,7 @@ export default function Edit(props) {
 
 return (
     <form className="add-review" onSubmit={handleSubmit(onSubmit)}>
-        <h4 style={{color: 'rgb(7, 172, 62)'}}>Edit Review</h4>
+        <h5 style={{color: 'rgb(7, 172, 62)'}}>Edit Review</h5>
         <input
             type="text"
             placeholder="New Review"
