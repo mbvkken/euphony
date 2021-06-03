@@ -18,7 +18,7 @@ const getReviews = () => {
 };
 useEffect(() => {
   getReviews();
-}, [reviews]);
+}, []);
 
   return (
     <div className="App">

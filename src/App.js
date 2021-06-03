@@ -17,10 +17,19 @@ function App() {
       <Switch>
         <Route path="/register" component={Login} />
         <Route path="/" component={Home} />;
-        <Route path="/edit" component={Edit} />;
       </Switch>
     </HashRouter>
   )
+}
+
+module.exports = {
+  addNumbers(a, b) {
+    return a + b;
+  },
+
+  subtractNumbers(a,b) {
+    return a - b;
+  }
 }
 
 export default App;
