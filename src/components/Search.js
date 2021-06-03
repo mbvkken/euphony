@@ -9,9 +9,9 @@ export default function Search() {
     
     return (
         <div className="search">
+          
             <input type="text" placeholder="Search by Album Title" 
-            onChange={event => {setSearchTerm(event.target.value)}} 
-            />
+            onChange={event => {setSearchTerm(event.target.value)}}/>
 
             {Albumdata.filter((val) => {
                 if (searchTerm == '') {
@@ -22,9 +22,7 @@ export default function Search() {
                         } else if (val.artist.toLowerCase().includes(searchTerm.toLowerCase())) {
                           return val;
                             }
-                      })
-
-                    .map((val, key) => {
+                      }).map((val, key) => {
                         return <div key={key}>
                                   <p style={{color:"black"}}>{val.artist} : {val.album_title}</p>
                                 </div>
