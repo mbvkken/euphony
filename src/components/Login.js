@@ -39,9 +39,7 @@ function Login () {
  
     return (
         <div className="App">
-        <header className="App-header">
-            <h2 style={{color: 'white'}}>euphony.</h2>
-        </header>
+        
         <div className="login-form">
             <div>
                 <h1 style={{color: 'black'}}>Registration</h1>
@@ -65,7 +63,6 @@ function Login () {
                 }}/>
                 <Link to="/"><button id="btn" onClick={login}>Login</button></Link>
             </div>
-            <h1>{loginStatus}</h1>
         </div>
         </div>
     )

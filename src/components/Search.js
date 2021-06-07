@@ -1,10 +1,9 @@
 import '../App.css';
 import { useState, useEffect } from 'react';
-// import Albumdata from './MOCK_DATA.json';
 import axios from  'axios'; 
 
 
-export default function Search() {
+function Search() {
 
   const [reviews, setReviews] = useState([]);
 
@@ -23,6 +22,7 @@ export default function Search() {
 
    
     return (
+      <div>
         <div className="search">
           
             <input type="text" placeholder="Search by Album Title" 
@@ -43,5 +43,9 @@ export default function Search() {
                                 </div>
                             })} 
         </div>
+      </div>
+        
     )
 }
+
+export default Search;

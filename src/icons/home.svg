@@ -1,0 +1,10 @@
+<svg id="icons_home_black" data-name="icons/home/black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Rectangle" transform="translate(8 13)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2">
+    <rect width="8" height="10" rx="2" stroke="none"/>
+    <rect x="1" y="1" width="6" height="8" rx="1" fill="none"/>
+  </g>
+  <g id="Path_6" data-name="Path 6" transform="translate(2 1)" fill="none" stroke-miterlimit="10">
+    <path d="M0,9V20a1.959,1.959,0,0,0,2,2H18a1.959,1.959,0,0,0,2-2V9L10,0Z" stroke="none"/>
+    <path d="M 10 2.690727233886719 L 2 9.890727043151855 L 2 19.95632553100586 C 2.001497268676758 19.96984481811523 2.003894805908203 19.98480033874512 2.00689697265625 20 L 17.95632553100586 20 C 17.96984481811523 19.99850273132324 17.98480033874512 19.9961051940918 18 19.99310302734375 L 18 9.890727043151855 L 10 2.690727233886719 M 10 0 L 20 9 C 20 9 20 18 20 20 C 20 22 18 22 18 22 C 18 22 4 22 2 22 C 0 22 0 20 0 20 L 0 9 L 10 0 Z" stroke="none" fill="#fff"/>
+  </g>
+</svg>

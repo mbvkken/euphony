@@ -5,6 +5,8 @@
 }
 
 .App-header {
+  text-align: center;
+  min-height: 100vh;
   margin-top: 0;
   padding: 1rem;
   color: white;
@@ -103,7 +105,7 @@ input {
   width: auto;
   height: auto;
   padding: 1em;
-  background-color: rgba(31, 58, 147, 1);
+  background-color: #284BBD;
   color: white;
 }
 
@@ -139,18 +141,16 @@ input {
 
 .login-form {
   display: grid;
+  margin: 4px;
+  padding: 20px;  
+  width: auto;
   border-radius: 5px;
   border: 1px solid black;
-  background-color: #f2f2f2;
-  padding: 20px;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  background-color: #4164D7;
 }
 
 .form-field {
-  width: 200px;
+  width: auto;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;

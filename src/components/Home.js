@@ -5,11 +5,13 @@ import Edit from './Edit';
 import Delete from './Delete';
 import Search from './Search';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, HashRouter, Switch, Route } from 'react-router-dom';
 
 function Home() {
 
 const [reviews, setReviews] = useState([]);
+
+console.log(reviews);
 
 const getReviews = () => {
   axios.get('http://localhost:3000/reviews').then((res) => {
@@ -22,12 +24,7 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h2 style={{color: 'white'}}>euphony.</h2>
-      </header>
       
-      
-    <Search />
     <Add reviews={reviews} setReviews={setReviews} />
     
       <div className="reviews">
