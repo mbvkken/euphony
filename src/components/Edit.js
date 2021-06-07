@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 export default function Edit(props) {
+    
     const { register, handleSubmit } = useForm();
     const onSubmit = (data) => {
         console.log(data);
@@ -12,7 +13,7 @@ export default function Edit(props) {
     };
 
     const updateReview = (data) => {
-        axios.put('http://localhost/3000/reviews', data).then((res) => {
+        axios.put('http://localhost:3000/reviews', data).then((res) => {
             props.setReviews(
                 props.reviews.map((item) => {
                     return item.id === props.id

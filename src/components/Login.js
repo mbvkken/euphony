@@ -42,7 +42,7 @@ function Login () {
         
         <div className="login-form">
             <div>
-                <h1 style={{color: 'black'}}>Registration</h1>
+                <h1>Registration</h1>
                 <label>Username</label>
                 <input className="form-field" type="text" onChange={(e) => {
                     setUserReg(e.target.value);
@@ -51,10 +51,10 @@ function Login () {
                 <input className="form-field" type="password" onChange={(e) => {
                     setPasswordReg(e.target.value);
                 }} />
-                <button id="btn" onClick={register}>Register</button>
+                <button id="btn" onClick={register}>Sign up</button>
             </div>
             <div>
-                <h1 style={{color: 'black'}}>Login</h1>
+                <h1>Login</h1>
                 <input className="form-field" type="text" placeholder="Username" onChange={(e) => {
                     setUsername(e.target.value);
                 }}/>
