@@ -68,7 +68,7 @@ app.post('/login', (req, res) => {
     )
 })
 
-app.get('/register', (req, res) => {
+app.get('/users', (req, res) => {
     db.query('SELECT * FROM users', (err, result) => {
         if (err) {
             console.log(err);
