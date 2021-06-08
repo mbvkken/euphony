@@ -3,6 +3,7 @@ import React from 'react';
 // import { useState, useEffect } from 'react';
 import Home from './components/Home';
 import Login from './components/Login';
+import Profile from './components/Profile';
 import { Navbar, TempNoNavBar } from './components/Navbar';
 import { Header, GridContain, PageContain } from './AppStyle';
 // import Add from './components/Add';
@@ -20,6 +21,7 @@ function App() {
      <Header><h2 style={{color: 'white', textAlign: 'center'}}>euphony.</h2></Header>
       <Switch>
         <Route path="/register" component={Login} />
+        <Route path="/profile" component={Profile} />
         <Route path="/search" component={Search} />
         <Route path="/" component={Home} />;
       </Switch>

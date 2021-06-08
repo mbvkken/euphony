@@ -24,7 +24,7 @@ const Navbar = (props) => {
                     <Home />
                 </Link> 
 
-                <Link to="/register">
+                <Link to="/profile">
                     <Profile />
                 </Link>
 

@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   /* min-height: 100vh; */
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   /* margin-bottom: 0; */
 }
 
@@ -11,7 +11,7 @@
   margin-top: 0;
   padding: 1rem;
   color: white;
-  background-color: rgba(31, 58, 147, 1);
+  background-color: #1f3a93;
 }
 
 .App-link {
@@ -118,6 +118,49 @@ input {
 }
 
 .reviews {
+  box-sizing: border-box;
+  width: auto;
+  display: flex;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* You can set flex-wrap and
+      flex-direction individually */
+   flex-direction: row;
+   flex-wrap: wrap;
+   /* Or do it all in one line
+     with flex flow */
+   flex-flow: row wrap;
+   /* tweak where items line
+      up on the row
+      valid values are: flex-start,
+      flex-end, space-between,
+      space-around, stretch */
+   /* align-content: flex-end; */
+  padding: 20px;
+}
+
+.profile-review {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 1em;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  padding: 1em;
+  background-color: #788785;
+  color: white;
+}
+
+.profile-review h5 {
+  font-style: italic;
+}
+.profile-review p {
+  font-style: normal;
+}
+
+.profile-reviews {
   box-sizing: border-box;
   width: auto;
   display: flex;

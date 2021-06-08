@@ -51,7 +51,7 @@ function Login () {
                 <input className="form-field" type="password" onChange={(e) => {
                     setPasswordReg(e.target.value);
                 }} />
-                <button id="btn" onClick={register}>Sign up</button>
+                <Link to="/"><button id="btn" onClick={register}>Sign up</button></Link>
             </div>
             <div>
                 <h1>Login</h1>

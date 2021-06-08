@@ -25,7 +25,7 @@ function Search() {
       <div>
         <div className="search">
           
-            <input type="text" placeholder="Search by Album Title" 
+            <input style={{width: '200px'}}type="text" placeholder="Search by Album Title or Artist" 
             onChange={event => {setSearchTerm(event.target.value)}}/>
             
             {reviews.filter((val) => {

@@ -43,11 +43,7 @@ console.log(reviews);
           );
         })}
       </div>
-      <button id="btn-red" style={{marginBottom: '40px'}}>
-        <Link to='/register' style={{textDecoration: 'none', color: 'white'}}>
-          Sign out
-        </Link>
-      </button>
+      
     </div>
   );
 }
