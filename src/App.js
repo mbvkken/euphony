@@ -11,14 +11,21 @@ import { Header, GridContain, PageContain } from './AppStyle';
 // import Delete from './components/Delete';
 // import Search from './components/Search';
 // import axios from 'axios';
-import { HashRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Search from './components/Search';
 
 
 function App() {
   return (
     <HashRouter>
-     <Header><h2 style={{color: 'white', textAlign: 'center'}}>euphony.</h2></Header>
+     <Header>
+       <h2 style={{color: 'white', textAlign: 'center'}}>
+         <Link to="/" style={{ textDecoration: "none", color: 'white' }}>
+           euphony.
+         </Link>
+       </h2>
+     </Header>
+      
       <Switch>
         <Route path="/register" component={Login} />
         <Route path="/profile" component={Profile} />
