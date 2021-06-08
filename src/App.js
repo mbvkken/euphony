@@ -1,16 +1,10 @@
 import './App.css';
 import React from 'react';
-// import { useState, useEffect } from 'react';
 import Home from './components/Home';
 import Login from './components/Login';
 import Profile from './components/Profile';
-import { Navbar, TempNoNavBar } from './components/Navbar';
-import { Header, GridContain, PageContain } from './AppStyle';
-// import Add from './components/Add';
-// import Edit from './components/Edit';
-// import Delete from './components/Delete';
-// import Search from './components/Search';
-// import axios from 'axios';
+import { Navbar } from './components/Navbar';
+import { Header, GridContain } from './AppStyle';
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Search from './components/Search';
 

@@ -3,9 +3,7 @@ import { useState, useEffect } from 'react';
 import Add from './Add';
 import Edit from './Edit';
 import Delete from './Delete';
-import Search from './Search';
 import axios from 'axios';
-import { Link, HashRouter, Switch, Route } from 'react-router-dom';
 
 function Home() {
 
@@ -43,7 +41,7 @@ console.log(reviews);
           );
         })}
       </div>
-      
+
     </div>
   );
 }
