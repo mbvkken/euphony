@@ -1,12 +1,20 @@
 const express = require('express');
 const mysql = require('mysql2');
 require('dotenv').config();
+const bodyParser = require("body-parser");
 
 const cors = require('cors');
 const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(bodyParser.json());
+
+const {
+    createAlbumListByUser,
+    createAlbumList,
+    getAlbumsByUsername
+} = require('./services/database-album');
 
 // connection to db
 
@@ -60,6 +68,16 @@ app.post('/login', (req, res) => {
     )
 })
 
+app.get('/register', (req, res) => {
+    db.query('SELECT * FROM users', (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    });
+});
+
 // CRUD routes
 
 app.get('/reviews', (req, res) => {
@@ -112,4 +130,20 @@ app.delete('/reviews/:id', (req, res) => {
         }
     );
 });
+
+
+// albumlists
+
+app.post('/albumlist', async (req, res) => {
+    const { album_title, noNullEmailArray } = req.body;
+    const newAlbumList = await createAlbumList(album_title, noNullEmailArray);
+    res.send({ newAlbumList });
+});
+
+app.get("/albumlist/:username", async (req, res) => {
+    const { username } = req.params;
+    const albumList = await getAlbumsByUsername(username);
+    res.send(albumList);
+    console.log(albumList);
+  });
 

@@ -20,7 +20,9 @@ const getReviews = () => {
 };
 useEffect(() => {
   getReviews();
-}, []);
+}, [reviews.join(",")]);
+
+console.log(reviews);
 
   return (
     <div className="App">
