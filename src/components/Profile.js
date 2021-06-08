@@ -9,8 +9,6 @@ function Profile() {
 
 const [reviews, setReviews] = useState([]);
 
-console.log(reviews);
-
 const getReviews = () => {
   axios.get('http://localhost:3000/reviews').then((res) => {
     setReviews(res.data);
@@ -19,8 +17,6 @@ const getReviews = () => {
 useEffect(() => {
   getReviews();
 }, [reviews.join(",")]);
-
-console.log(reviews);
 
   return (
     <div className="App">
