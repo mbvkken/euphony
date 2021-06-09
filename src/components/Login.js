@@ -71,7 +71,9 @@ function Login () {
                 <input className="form-field" type="password" placeholder="Password" onChange={(e) => {
                     setPassword(e.target.value);
                 }}/>
-                <Link to="/"><button id="btn" onClick={login}>Log in</button></Link>
+                <Link to="/">
+                    <button id="btn" onClick={login}>Log in</button>
+                </Link>
             </div>
             <h1>{loginStatus}</h1>
         </div>

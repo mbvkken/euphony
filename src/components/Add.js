@@ -4,10 +4,13 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
 export default function Add(props) {
-    const { register,  handleSubmit } = useForm();
+    const { register,  handleSubmit, reset } = useForm();
     const onSubmit = (data) => {
         console.log(data);
         addReview(data);
+        reset('', {
+            keepValues: false,
+        })
     };
 
     const addReview = (data) => {
