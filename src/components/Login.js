@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,8 @@ function Login () {
     const [password, setPassword] = useState('');
 
     const [loginStatus, setLoginStatus] = useState('');
+
+    axios.defaults.withCredentials = true;
 
     const register = () => {
         axios.post('http://localhost:3000/register', {
@@ -36,6 +38,14 @@ function Login () {
             }
         })
     }
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/login').then((response) => {
+            if (response.data.loggedIn == true) {
+                setLoginStatus(response.data.user[0].username)  
+              }
+        })
+    }, [])
  
     return (
         <div className="App">
@@ -61,8 +71,9 @@ function Login () {
                 <input className="form-field" type="password" placeholder="Password" onChange={(e) => {
                     setPassword(e.target.value);
                 }}/>
-                <Link to="/"><button id="btn" onClick={login}>Login</button></Link>
+                <Link to="/"><button id="btn" onClick={login}>Log in</button></Link>
             </div>
+            <h1>{loginStatus}</h1>
         </div>
         </div>
     )
