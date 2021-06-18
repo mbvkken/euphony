@@ -1,0 +1,12 @@
+.modalRoot {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    background-color: rgba(1, 1, 1, 0.2);
+  }

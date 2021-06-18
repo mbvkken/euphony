@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+
 .App {
   text-align: center;
   /* min-height: 100vh; */
@@ -47,6 +49,9 @@ input {
   text-align: center;
 }
 
+
+/* BUTTONS */
+
 #btn {
   cursor: pointer;
   width: 8rem;
@@ -75,6 +80,21 @@ input {
   background-color: rgb(206, 73, 73);
 }
 
+#btn-blue {
+  cursor: pointer;
+  width: 8rem;
+  padding: 1rem 0rem;
+  font-size: 1rem;
+  font-family: 'Roboto';
+  background-color: #1f3a93;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+}
+#btn-blue:hover {
+  background-color: #1f3a93;
+}
+
 #signout-btn {
   padding-top: 40px;
   display: flex;
@@ -97,13 +117,34 @@ input {
   background-color: rgb(206, 73, 73);
 }
 
+#close-btn {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(59, 56, 56);
+  color: white;
+  border: none;
+  border-radius: 1rem;
+}
+#close-btn:hover {
+  background-color: rgb(150, 146, 146);
+}
+
+.closing-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* REVIEWS */
+
 .review {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   margin: 1em;
   border-radius: 10px;
-  width: auto;
+  width: 400px;
   height: auto;
   padding: 1em;
   background-color: #4164D7;
@@ -111,32 +152,25 @@ input {
 }
 
 .review h5 {
-  font-style: italic;
+  margin: 10px;
 }
 .review p {
-  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.reviews button {
+  margin: 10px;
 }
 
 .reviews {
   box-sizing: border-box;
   width: auto;
   display: flex;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   /* You can set flex-wrap and
-      flex-direction individually */
-   flex-direction: row;
-   flex-wrap: wrap;
-   /* Or do it all in one line
-     with flex flow */
-   flex-flow: row wrap;
-   /* tweak where items line
-      up on the row
-      valid values are: flex-start,
-      flex-end, space-between,
-      space-around, stretch */
-   /* align-content: flex-end; */
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
   padding: 20px;
 }
 

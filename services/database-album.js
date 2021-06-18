@@ -7,6 +7,19 @@ const db = mysql.createPool({
     database: process.env.DB
 });
 
+function getAlbumById(id) {
+    return db.query(`
+        SELECT 
+            albums.id,
+            albums.album_title,
+            albums.album_review,
+            albums.album_rating,
+            albums.artist
+        FROM albums;
+    `, [id])
+    .then((results) => results.rows)
+}
+
 function createAlbumListByUser(album_id, username) {
     return db.promise().query(
         `INSERT INTO user_albumlist
@@ -49,5 +62,6 @@ function getAlbumsByUsername(username) {
 module.exports = {
     createAlbumListByUser,
     createAlbumList,
-    getAlbumsByUsername
+    getAlbumsByUsername,
+    getAlbumById
 };

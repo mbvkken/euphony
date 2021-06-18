@@ -34,7 +34,8 @@ app.use(session({
 const {
     createAlbumListByUser,
     createAlbumList,
-    getAlbumsByUsername
+    getAlbumsByUsername,
+    getAlbumById
 } = require('./services/database-album');
 
 // connection to db
@@ -129,6 +130,23 @@ app.get('/reviews', (req, res) => {
         }
     });
 });
+
+app.get('/reviews/:id', (req, res) => {
+    db.query('SELECT * FROM albums WHERE id = ?', req.params.id, 
+    (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+    })
+})
+
+// app.get('/reviews/:id', async (req, res) => {
+//     const { id } = req.params;
+//     const reviews = await getAlbumById(id);
+//     res.send(reviews);
+// })
 
 app.post('/reviews', (req, res) => {
     const insertQuery = 'INSERT INTO albums SET ?';

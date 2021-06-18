@@ -7,6 +7,7 @@ import { Navbar } from './components/Navbar';
 import { Header, GridContain } from './AppStyle';
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import Search from './components/Search';
+import AlbumModal from './components/AlbumModal';
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
         <Route path="/register" component={Login} />
         <Route path="/profile" component={Profile} />
         <Route path="/search" component={Search} />
-        <Route path="/" component={Home} />;
+        <Route path="/" component={Home} />
+        <Route path="/:id" component={AlbumModal} />
       </Switch>
 
       <GridContain>
