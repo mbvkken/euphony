@@ -14,7 +14,7 @@ const [reviews, setReviews] = useState([]);
 
 useEffect(() => {
   const getReviewsById = async () => {
-    const url = `http://localhost:3000/reviews/${reviews}`;
+    const url = `http://localhost:3000/reviews/135`;
     const result = await axios.get(url);
     setReviews(result.data)
     console.log(result.data, 'test');
